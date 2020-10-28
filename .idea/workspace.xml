@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="879f88b1-b963-4a76-98a2-f68292fa4f9d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shared/_messages.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shared/_messages.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +160,7 @@
       <workItem from="1603616039491" duration="7527000" />
       <workItem from="1603703149373" duration="8304000" />
       <workItem from="1603762151244" duration="25710000" />
-      <workItem from="1603849158479" duration="14300000" />
+      <workItem from="1603849158479" duration="15403000" />
     </task>
     <servers />
   </component>
@@ -189,9 +188,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1603849157421" />
-    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1603867342022">
+    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1603872805374">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603867342022" />
+    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603872805374" />
   </component>
 </project>
