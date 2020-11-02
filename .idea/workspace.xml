@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="879f88b1-b963-4a76-98a2-f68292fa4f9d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/larabbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/larabbs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +125,7 @@
       <path value="$PROJECT_DIR$/vendor/mews/captcha" />
       <path value="$PROJECT_DIR$/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/summerblue/generator" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jMZgkJpBlSul2Wdg5xeZ2A21xn" />
@@ -166,6 +172,7 @@
       <workItem from="1603941357071" duration="12551000" />
       <workItem from="1604035107801" duration="11675000" />
       <workItem from="1604121939155" duration="10151000" />
+      <workItem from="1604283640688" duration="2423000" />
     </task>
     <servers />
   </component>
@@ -190,10 +197,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="914" y="317" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1604036709400" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1604121943858">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1604283641309">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1604121943858" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1604283641309" />
     <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1603949948414">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
