@@ -13,6 +13,7 @@ class ReplyRequest extends Request
             {
                 return [
                     // CREATE ROLES
+                    'content' => 'required|min:2',
                 ];
             }
             // UPDATE
@@ -36,6 +37,8 @@ class ReplyRequest extends Request
     {
         return [
             // Validation messages
+            'content.required' => '评论内容不得为空',
+            'content.min' => '评论内容最少两个字符',
         ];
     }
 }
