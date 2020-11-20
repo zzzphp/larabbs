@@ -22,7 +22,6 @@ class TopicReplied extends Notification implements ShouldQueue
     {
         // 注入回复实体，方便 toDatabase方法中的使用
         $this->reply = $reply;
-
     }
 
     /**
