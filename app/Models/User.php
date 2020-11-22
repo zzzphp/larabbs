@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 use Auth;
+use Illuminate\Support\Str;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmailContracts
@@ -28,6 +29,26 @@ class User extends Authenticatable implements MustVerifyEmailContracts
         }
 
         $this->laravelNotify($instance);
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        // 如果值长度不等于60 则没有被加密
+        if (strlen($value) != 60) {
+            $value = bcrypt($value);
+        }
+
+        $this->attributes['password'] = $value;
+    }
+
+    public function setAvatarAttribute($path)
+    {
+        // 如果不是http开头的那就是从后台上传的
+        if (!Str::startsWith($path, 'http')) {
+            $path = config('app.url') . "/uploads/images/avatars/$path";
+        }
+
+        $this->attributes['avatar'] = $path;
     }
 
     public function markAsRead()
