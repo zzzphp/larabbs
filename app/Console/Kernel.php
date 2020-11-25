@@ -25,7 +25,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')
-        //          ->hourly();
+        //          ->hourly();job
+        // 一小时执行一次 活跃用户数据生成的命令
+        $schedule->command('larabbs:calculate-active-user')->hourly()->emailOutputTo('491315686@qq.com');
     }
 
     /**

@@ -9,6 +9,7 @@ return array(
      */
     'uri' => 'admin',
 
+
     /*
      *  Domain for routing.
      *
@@ -85,6 +86,7 @@ return array(
         return Auth::check() && Auth::user()->can('manage_contents');
     },
 
+
     /*
      * This determines if you will have a dashboard (whose view you provide in the dashboard_view option) or a non-dashboard home
      * page (whose menu item you provide in the home_page option)
@@ -105,7 +107,7 @@ return array(
      *
      * @type string
      */
-    'home_page' => 'users',
+    'home_page' => 'topics',
 
     /*
      * The route to which the user will be taken when they click the "back to site" button
@@ -116,11 +118,11 @@ return array(
 
     /*
      * The login path is the path where Administrator will send the user if they fail a permission check
-     *
+     * 当`permission`权限检查不通过时，会重定向用户到此处设置的路径
      * @type string
      */
-    'login_path' => 'login',
-
+    'login_path' => 'permission-denied',
+    
     /*
      * The logout path is the path where Administrator will send the user when they click the logout link
      *
