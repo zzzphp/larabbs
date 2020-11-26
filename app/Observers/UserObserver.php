@@ -30,4 +30,12 @@ class UserObserver
         DB::table('replies')->whereIn('topic_id', $topics)->orWhere('user_id', $user->id)->delete();
         DB::table('topics')->where('user_id', $user->id)->delete();
     }
+
+    public function saving(User $user)
+    {
+        if (empty($user->avatar)) {
+            $user->avatar = '202011/26/1_1606367737_kfHwT1SVEY.jpg';
+            $user->introduction = '上善若水,水善利万物而不争,处众人之所恶,故几于道';
+        }
+    }
 }
