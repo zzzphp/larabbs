@@ -43,6 +43,7 @@ class TopicObserver
 
     public function deleted(Topic $topic)
     {
+        // 话题被删除后删除话题所属的回复
         DB::table('replies')->where('topic_id', $topic->id)->delete();
     }
 }
