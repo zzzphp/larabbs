@@ -17642,3 +17642,29 @@ html {
   background-color: #d15b47 !important;
 }
 
+/* 关注列表 */
+
+.users-relation-list li > a {
+  position: relative;
+  display: block;
+  padding: 5px 14px;
+  font-size: 0.9em;
+}
+
+.users-relation-list a {
+  color: #444444;
+}
+
+.users-relation-list .meta {
+  font-size: 0.9em;
+  color: #b3b3b3;
+}
+
+.users-relation-list .meta a {
+  color: #b3b3b3;
+}
+
+.users-relation-list .badge {
+  background-color: #d8d8d8;
+}
+

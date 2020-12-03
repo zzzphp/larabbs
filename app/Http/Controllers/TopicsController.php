@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Link;
 use App\Models\Topic;
 use App\Models\User;
+use App\Models\UsersRelation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
@@ -29,13 +30,14 @@ class TopicsController extends Controller
 		return view('topics.index', compact('topics', 'active_users', 'links'));
 	}
 
-    public function show(Request $request, Topic $topic)
+    public function show(Request $request, Topic $topic, UsersRelation $usersRelation)
     {
         // URL 矫正
         if ( ! empty($topic->slug) && $topic->slug != $request->slug) {
             return redirect($topic->link(), 301);
         }
-        return view('topics.show', compact('topic'));
+        $follow = $usersRelation->isFollow($topic->user_id);
+        return view('topics.show', compact('topic', 'follow'));
     }
 
 	public function create(Topic $topic)

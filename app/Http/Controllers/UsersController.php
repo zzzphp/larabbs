@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
 use App\Models\User;
+use App\Models\UsersRelation;
 use Illuminate\Http\Request;
 use App\Handlers\ImageUploadHandler;
 
@@ -15,9 +16,10 @@ class UsersController extends Controller
     }
 
     //
-    public function show(User $user)
+    public function show(User $user, UsersRelation $usersRelation)
     {
-        return view('users.show', compact('user'));
+        $follow = $usersRelation->isFollow($user->id);
+        return view('users.show', compact('user', 'follow', 'usersRelation'));
     }
 
     public function edit(User $user)

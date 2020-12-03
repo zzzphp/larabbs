@@ -22,6 +22,27 @@
             </div>
           </div>
         </div>
+        @guest
+          @else
+        <div class="follow" align="center">
+          @if($follow)
+            <form action="{{ route('users_relations.destroy', $follow->id) }}" method="POST" onsubmit="return confirm('您确定要取消关注吗？');" accept-charset="UTF-8">
+              <input type="hidden" name="follower_id" value="{{ $topic->user_id }}">
+              {{ csrf_field() }}
+              {{ method_field('DELETE') }}
+              <button type="submit" class="btn btn-outline-secondary"><i class="far fa-heart"></i>&nbsp;已关注</button>
+            </form>
+          @else
+            @if(\Illuminate\Support\Facades\Auth::id() !== $topic->user_id)
+            <form action="{{ route('users_relations.store') }}" method="POST" accept-charset="UTF-8">
+              <input type="hidden" name="follower_id" value="{{ $topic->user_id }}">
+              {{ csrf_field() }}
+              <button type="submit" class="btn btn-outline-secondary"><i class="far fa-heart"></i>&nbsp;关注Ta</button>
+            </form>
+              @endif
+          @endif
+        </div>
+          @endguest
       </div>
     </div>
 

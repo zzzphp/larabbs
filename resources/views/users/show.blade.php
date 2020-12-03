@@ -16,6 +16,26 @@
           <p>{{ $user->created_at->diffForHumans() }}</p>
           <h5><strong>最后活跃</strong></h5>
           <p title="{{  $user->last_actived_at }}">{{ $user->last_actived_at->diffForHumans() }}</p>
+          @guest
+          @else
+
+              @if($follow)
+                <form action="{{ route('users_relations.destroy', $follow->id) }}" method="POST" onsubmit="return confirm('您确定要取消关注吗？');" accept-charset="UTF-8">
+                  <input type="hidden" name="follower_id" value="{{ $user->id }}">
+                  {{ csrf_field() }}
+                  {{ method_field('DELETE') }}
+                  <button type="submit" class="btn btn-outline-secondary"><i class="far fa-heart"></i>&nbsp;已关注</button>
+                </form>
+              @else
+                @if(\Illuminate\Support\Facades\Auth::user()->id !== $user->id)
+                <form action="{{ route('users_relations.store') }}" method="POST" accept-charset="UTF-8">
+                  <input type="hidden" name="follower_id" value="{{ $user->id }}">
+                  {{ csrf_field() }}
+                  <button type="submit" class="btn btn-outline-secondary"><i class="far fa-heart"></i>&nbsp;关注Ta</button>
+                </form>
+                @endif
+              @endif
+              @endguest
         </div>
       </div>
     </div>
@@ -41,10 +61,17 @@
                 Ta 的回复
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link bg-transparent {{ active_class(if_query('tab', 'users_relations')) }}" href="{{ route('users.show', [$user->id, 'tab' => 'users_relations']) }}">
+                关注用户
+              </a>
+            </li>
           </ul>
           @if (if_query('tab', 'replies'))
             @include('users._replies', ['replies' => $user->replies()->with('topic')->recentreplied()->paginate(5)])
-          @else
+          @elseif(if_query('tab', 'users_relations'))
+            @include('users._relations', ['relations' => $user->users_relations()->recent()->with('user')->paginate(5)])
+            @else
             @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
           @endif
         </div>
