@@ -34,13 +34,11 @@ trait ActiveUserHelper
         return Cache::remember($this->cache_key, $this->cache_expire_in_seconds, function (){
             return $this->calculateAndCacheActiveUsers();
         });
-
     }
 
     public function calculateAndCacheActiveUsers()
     {
         $active_users = $this->calculateActiveUsers();
-
         $this->cacheActiveUsers($active_users);
 
         return $active_users;
