@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="879f88b1-b963-4a76-98a2-f68292fa4f9d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/larabbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/larabbs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/z.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/VerificationCodesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/VerificationCodesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Api/VerificationCodeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/VerificationCodeRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Traits/ActiveUserHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Traits/ActiveUserHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/UserObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/UserObserver.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,6 +177,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\z\code\larabbs\app\Http\Controllers\Api" />
       <recent name="C:\Users\z\code\larabbs\app\Models" />
       <recent name="C:\Users\z\code\larabbs\resources\views" />
       <recent name="C:\Users\z\code\larabbs\resources\views\shared" />
@@ -249,7 +243,9 @@
       <workItem from="1606960941962" duration="13597000" />
       <workItem from="1607045278174" duration="4902000" />
       <workItem from="1607072904321" duration="12510000" />
-      <workItem from="1607322595520" duration="4870000" />
+      <workItem from="1607322595520" duration="11021000" />
+      <workItem from="1607393064417" duration="2472000" />
+      <workItem from="1607398550186" duration="1081000" />
     </task>
     <servers />
   </component>
@@ -274,14 +270,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="254" y="241" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1606806860580" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1607072987554">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1607398553283">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607072987554" />
-    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1607162934044">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607398553283" />
+    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1607335401667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607162934044" />
+    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607335401667" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607076286539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -35,6 +35,8 @@ class UserObserver
     {
         if (empty($user->avatar)) {
             $user->avatar = '202011/26/1_1606367737_kfHwT1SVEY.jpg';
+        }
+        if (empty($user->introduction)) {
             $user->introduction = '上善若水,水善利万物而不争,处众人之所恶,故几于道';
         }
     }
