@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="879f88b1-b963-4a76-98a2-f68292fa4f9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/z.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/larabbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/larabbs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthorizationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/AuthorizationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/SocialAuthorizationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Api/SocialAuthorizationRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/UserObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/UserObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UsersRelationFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UsersRelationFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/UsersRelationsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersRelationsTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,6 +170,9 @@
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/weixin" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/manager" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jMZgkJpBlSul2Wdg5xeZ2A21xn" />
@@ -170,6 +183,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -177,11 +191,17 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\z\code\larabbs\app\Http\Requests\Api" />
       <recent name="C:\Users\z\code\larabbs\app\Http\Controllers\Api" />
       <recent name="C:\Users\z\code\larabbs\app\Models" />
       <recent name="C:\Users\z\code\larabbs\resources\views" />
       <recent name="C:\Users\z\code\larabbs\resources\views\shared" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="open larashop" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -245,7 +265,13 @@
       <workItem from="1607072904321" duration="12510000" />
       <workItem from="1607322595520" duration="11021000" />
       <workItem from="1607393064417" duration="2472000" />
-      <workItem from="1607398550186" duration="1081000" />
+      <workItem from="1607398550186" duration="17893000" />
+      <workItem from="1607481870825" duration="2357000" />
+      <workItem from="1607490507395" duration="316000" />
+      <workItem from="1607601188967" duration="640000" />
+      <workItem from="1607605567327" duration="6714000" />
+      <workItem from="1607612359450" duration="273000" />
+      <workItem from="1607653791242" duration="734000" />
     </task>
     <servers />
   </component>
@@ -258,6 +284,18 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="122" y="143" key="#HTTP_Proxy" timestamp="1607610289536">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="122" y="143" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1607610289536" />
+    <state x="604" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607612163529">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="604" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1607612163529" />
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607612281771">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1607612281771" />
     <state x="499" y="168" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606919856285">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -270,14 +308,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="254" y="241" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1606806860580" />
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1607398553283">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1607612360612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607398553283" />
-    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1607335401667">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1607612360612" />
+    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1607608777776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607335401667" />
+    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607608777776" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1607612217214">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607612217214" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607076286539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -28,10 +28,32 @@ Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function (){
             Route::post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
                 ->where('social_type', 'weixin')
                 ->name('socials.authorizations.store');
+            // 登录
+            Route::post('authorizations', 'AuthorizationsController@store')
+                ->name('authorizations.store');
+            // 刷新jwt Token
+            Route::put('authorizations/current', 'AuthorizationsController@update')
+                ->name('authorizations.update');
+            // 退出，删除jwt Token
+            Route::delete('authorizations/current', 'AuthorizationsController@destroy')
+                ->name('authorizations.destroy');
         });
 
     Route::middleware('throttle:' . config('api.rate_limits.access'))
         ->group(function (){
+            // 游客可以访问的接口
+
+            // 查看某个用户信息
+            Route::get('users/{user}', 'UsersController@show')
+                ->name('users.show');
+
+            // 登录可以访问的接口
+            Route::middleware('auth:api')->group(function (){
+                // 当前登录用户信息
+                Route::get('user', 'UsersController@me')
+                    ->name('user.show');
+
+            });
 
         });
 });

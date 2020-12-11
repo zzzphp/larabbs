@@ -11,8 +11,9 @@ use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
 use Auth;
 use Illuminate\Support\Str;
 use Spatie\Permission\Traits\HasRoles;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable implements MustVerifyEmailContracts
+class User extends Authenticatable implements MustVerifyEmailContracts, JWTSubject
 {
     use MustVerifyEmailTrait;
     use Notifiable {
@@ -80,7 +81,7 @@ class User extends Authenticatable implements MustVerifyEmailContracts
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'weixin_openid', 'weixin_unionid',
     ];
 
     /**
@@ -110,5 +111,23 @@ class User extends Authenticatable implements MustVerifyEmailContracts
     public function isAuthorOf($model)
     {
         return $model->user_id == $this->id;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getJWTIdentifier()
+    {
+        // TODO: Implement getJWTIdentifier() method.
+        return $this->getKey();
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getJWTCustomClaims()
+    {
+        // TODO: Implement getJWTCustomClaims() method.
+        return [];
     }
 }
