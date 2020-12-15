@@ -66,7 +66,7 @@ class AuthorizationsController extends Controller
             $credentials['email'] = $username :
             $credentials['phone'] = $username;
 
-        $credentials['password'] = $request->password;
+            $credentials['password'] = $request->password;
 
         if (!$token = Auth::guard('api')->attempt($credentials)) {
             throw new AuthenticationException('用户或密码错误');
