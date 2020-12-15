@@ -6,11 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\TopicRequest;
 use App\Http\Resources\TopicResource;
 use App\Models\Topic;
-use Illuminate\Http\Request;
 
 class TopicsController extends Controller
 {
-    //
+    // 添加话题
     public function store(Topic $topic, TopicRequest $request)
     {
         $topic->fill($request->all());
@@ -19,4 +18,14 @@ class TopicsController extends Controller
 
         return new TopicResource($topic);
     }
+
+    public function update(TopicRequest $request, Topic $topic)
+    {
+        $this->authorize('update', $topic);
+
+        $topic->update($request->all());
+        return new TopicResource($topic);
+    }
+
+
 }
