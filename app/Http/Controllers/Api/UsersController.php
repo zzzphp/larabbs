@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Queries\TopicQuery;
 use App\Http\Requests\Api\UserRequest;
 use App\Http\Requests\Request;
 use App\Http\Resources\TopicResource;
@@ -52,21 +53,6 @@ class UsersController extends Controller
         $user->update($attributes);
 
         return (new UserResource($user))->showSensitiveFields();
-    }
-
-    public function userIndex(Request $request, User $user)
-    {
-        $query = $user->topics()->getQuery();
-
-        $topics = QueryBuilder::for($query)
-                    ->allowedIncludes('user', 'category')
-                    ->allowedFilters([
-                        'title',
-                        AllowedFilter::exact('category_id'),
-                        AllowedFilter::scope('withOrder')->default('recentReplied'),
-                    ])
-                    ->paginate();
-        return TopicResource::collection($topics);
     }
 
     // 查看某个用户信息
