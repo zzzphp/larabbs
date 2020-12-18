@@ -71,6 +71,9 @@ Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function (){
                 // 话题操作
                 Route::resource('topics', 'TopicsController')
                     ->only(['update', 'destroy', 'store']);
+                // 发表回复
+                Route::post('topics/{topic}/replies', 'RepliesController@store')
+                    ->name('topics.replies.store');
 
             });
 
