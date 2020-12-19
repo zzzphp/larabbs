@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="879f88b1-b963-4a76-98a2-f68292fa4f9d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/RoleResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TopicsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TopicsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Queries/TopicQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Queries/TopicQuery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/TopicResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/TopicResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +273,7 @@
       <workItem from="1608194907542" duration="4374000" />
       <workItem from="1608254385071" duration="6261000" />
       <workItem from="1608271600440" duration="5899000" />
-      <workItem from="1608341534689" duration="6018000" />
+      <workItem from="1608341534689" duration="8817000" />
     </task>
     <servers />
   </component>

@@ -56,7 +56,6 @@ class TopicsController extends Controller
 //                    ])
 //                    ->paginate();
         $topics = $query->paginate();
-
         return TopicResource::collection($topics);
     }
 
@@ -83,7 +82,7 @@ class TopicsController extends Controller
 //            ->allowedIncludes('user', 'category')
 //            ->findOrFail($topicId);
         $topic = $query->findOrFail($topicId);
-        return new TopicResource($topic);
+        return (new TopicResource($topic))->showSensitiveFields();
     }
 
 

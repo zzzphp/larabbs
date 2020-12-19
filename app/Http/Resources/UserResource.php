@@ -8,7 +8,6 @@ class UserResource extends JsonResource
 {
     // 是否显示隐私字段，默认不显示
     protected $showSensitiveFields = false;
-
     /**
      * Transform the resource into an array.
      *
@@ -26,6 +25,9 @@ class UserResource extends JsonResource
         $data['bound_phone'] = $this->resource->phone ? true : false;
         $data['bound_wechat'] = ($this->resource->weixin_openid || $this->resource->weixin_unionid) ? true : false;
 
+        $data['roles'] = RoleResource::collection($this
+            ->whenLoaded('roles'));
+
         return $data;
     }
 
@@ -35,5 +37,6 @@ class UserResource extends JsonResource
 
         return $this;
     }
+
 
 }
