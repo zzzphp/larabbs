@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function (){
+Route::prefix('v1')->namespace('Api')->middleware('change-locale')->name('api.v1.')->group(function (){
     // 利用中间件控制访问频率
     Route::middleware('throttle:' . config('api.rate_limits.sign'))
         ->group(function (){
@@ -41,7 +41,7 @@ Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function (){
 
     Route::middleware('throttle:' . config('api.rate_limits.access'))
         ->group(function (){
-            // 游客可以访问的接口
+            /*begin 游客可以访问的接口*/
 
             // 查看某个用户信息
             Route::get('users/{user}', 'UsersController@show')
@@ -59,6 +59,13 @@ Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function (){
             // 查看某个用户的话题
             Route::get('users/{user}/topics', 'TopicsController@userIndex')
                 ->name('users.topics.index');
+            // 资源推荐
+            Route::get('links', 'LinkController@index')
+                ->name('links.index');
+            // 活跃用户
+            Route::get('actived/users', 'UsersController@activedIndex')
+                ->name('actived.users.index');
+            /*end 游客可以访问的接口*/
 
             // 登录可以访问的接口
             Route::middleware('auth:api')->group(function (){
@@ -92,7 +99,6 @@ Route::prefix('v1')->namespace('Api')->name('api.v1.')->group(function (){
                 // 当前用户权限
                 Route::get('user/permissions', 'PermissionsController@index')
                     ->name('user.permissions.index');
-
             });
 
         });
