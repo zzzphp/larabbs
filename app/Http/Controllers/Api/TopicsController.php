@@ -80,7 +80,7 @@ class TopicsController extends Controller
 //            ->allowedIncludes('user', 'category')
 //            ->findOrFail($topicId);
         $topic = $query->findOrFail($topicId);
-        return (new TopicResource($topic))->showSensitiveFields();
+        return (new TopicResource($topic));
     }
 
 

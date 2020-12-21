@@ -6,7 +6,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class TopicResource extends JsonResource
 {
-    protected $showSensitiveFields = false;
+    protected $hiddenSensitiveFields = true;
 
     /**
      * Transform the resource into an array.
@@ -16,7 +16,7 @@ class TopicResource extends JsonResource
      */
     public function toArray($request)
     {
-        if (!$this->showSensitiveFields) {
+        if (!$this->hiddenSensitiveFields) {
             $this->resource->addHidden(['body']);
         }
         $data = parent::toArray($request);
@@ -26,9 +26,9 @@ class TopicResource extends JsonResource
         return $data;
     }
 
-    public function showSensitiveFields()
+    public function hiddenSensitiveFields()
     {
-        $this->showSensitiveFields = true;
+        $this->hiddenSensitiveFields = false;
 
         return $this;
     }

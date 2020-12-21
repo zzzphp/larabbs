@@ -38,8 +38,8 @@ class TopicApiTest extends TestCase
             'body' => clean('test body', 'user_topic_body'),
         ];
 
-        $response->assertStatus(201);
-//            ->assertJsonFragment($assertData);
+        $response->assertStatus(201)
+            ->assertJsonFragment($assertData);
     }
 
     public function testUpdateTopic()
@@ -52,8 +52,8 @@ class TopicApiTest extends TestCase
             ->json('PATCH', '/api/v1/topics/'.$topic->id, $editData);
 
         $assertData= [
-            'category_id' => 2,
             'user_id' => $this->user->id,
+            'category_id' => 2,
             'title' => 'edit title',
             'body' => clean('edit body', 'user_topic_body'),
         ];

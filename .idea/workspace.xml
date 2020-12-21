@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="879f88b1-b963-4a76-98a2-f68292fa4f9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Traits/ActingJWTUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/TopicObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/TopicObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sudosu.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/sudosu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/TopicsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/TopicsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/TopicResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/TopicResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/TopicApiTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/TopicApiTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +275,7 @@
       <workItem from="1608254385071" duration="6261000" />
       <workItem from="1608271600440" duration="5899000" />
       <workItem from="1608341534689" duration="14177000" />
-      <workItem from="1608531450686" duration="7158000" />
+      <workItem from="1608531450686" duration="9846000" />
     </task>
     <servers />
   </component>
@@ -326,10 +324,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1608341534146" />
-    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1608366514001">
+    <state x="447" y="145" width="782" height="600" key="find.popup" timestamp="1608539833743">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1608366514001" />
+    <state x="447" y="145" width="782" height="600" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1608539833743" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1608344383535">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
